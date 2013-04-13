@@ -42,12 +42,11 @@
 @private
     UITextField *_usernameField;
     UITextField *_passwordField;
-    id<CredentialAlertDelegate> _credentialDelegate;
 }
 
 @property (nonatomic, copy) NSString *username;
 @property (nonatomic, copy) NSString *password;
-@property (nonatomic, assign) id <CredentialAlertDelegate> credentialDelegate;
+@property (nonatomic, weak) id <CredentialAlertDelegate> credentialDelegate;
 
 - (id)initWithDelegate:(id<CredentialAlertDelegate>)delegate forHost:(NSString *)hostName;
 
@@ -110,7 +109,6 @@
         _usernameField.returnKeyType = UIReturnKeyNext;
         _usernameField.clearButtonMode = UITextFieldViewModeUnlessEditing;
         [self addSubview:_usernameField];
-        [_usernameField release];
         
         _passwordField = [[UITextField alloc] initWithFrame:CGRectZero];
         _passwordField.secureTextEntry = YES;
@@ -123,7 +121,6 @@
         _passwordField.returnKeyType = UIReturnKeyDone;
         _passwordField.clearButtonMode = UITextFieldViewModeUnlessEditing;
         [self addSubview:_passwordField];
-        [_passwordField release];
     }
     
     return self;
@@ -328,12 +325,6 @@ static NSData *_endMarkerData = nil;
         [_connection cancel];
         [self cleanupConnection];
     }
-    
-    [_url release];
-    [_username release];
-    [_password release];
-
-    [super dealloc];
 }
 
 #pragma mark - Public Methods
@@ -365,17 +356,13 @@ static NSData *_endMarkerData = nil;
 #pragma mark - Private Methods
 
 - (void)cleanupConnection {
-    [_connection release];
     _connection = nil;
-
-    [_receivedData release];
     _receivedData = nil;
 }
 
 #pragma mark - NSURLConnection Delegate Methods
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    [_receivedData release];
     _receivedData = [[NSMutableData alloc] init];
 }
 
@@ -443,13 +430,11 @@ static NSData *_endMarkerData = nil;
 #pragma mark - CredentialAlertView Delegate Methods
 
 - (void)credentialAlertCancelled:(CredentialAlertView *)alert {
-    [alert release];
 }
 
 - (void)credentialAlertSaved:(CredentialAlertView *)alert {
     self.username = alert.username;
     self.password = alert.password;
-    [alert release];
     
     [self play];
 }

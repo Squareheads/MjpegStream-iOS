@@ -78,12 +78,5 @@
     [_imageView play];
 }
 
-- (void)dealloc {
-    [_window release];
-    [_webView release];
-    [_imageView release];
-    
-    [super dealloc];
-}
 
 @end
