@@ -1,0 +1,15 @@
+# SSHFS/FUSE (or what?) related garbage
+._*
+
+# OS X Finder related garbage
+.DS_Store
+
+/tmp/
+
+# JetBrains AppCode stuff
+.idea
+
+# Xcode user specific files
+*.xcodeproj/xcuserdata
+*.xcodeproj/project.xcworkspace
+
