@@ -25,8 +25,8 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface MotionJpegImageView : UIImageView {
-    
 @private
     NSURL *_url;
     NSURLConnection *_connection;
@@ -35,15 +35,14 @@
     NSString *_password;
     BOOL _allowSelfSignedCertificates;
     BOOL _allowClearTextCredentials;
-    
 }
 
-@property (nonatomic, readwrite, copy) NSURL *url;
+@property (nonatomic, copy) NSURL *url;
 @property (readonly) BOOL isPlaying;
-@property (nonatomic, readwrite, copy) NSString *username;
-@property (nonatomic, readwrite, copy) NSString *password;
-@property (nonatomic, readwrite, assign) BOOL allowSelfSignedCertificates;
-@property (nonatomic, readwrite, assign) BOOL allowClearTextCredentials;
+@property (nonatomic, copy) NSString *username;
+@property (nonatomic, copy) NSString *password;
+@property (nonatomic, assign) BOOL allowSelfSignedCertificates;
+@property (nonatomic, assign) BOOL allowClearTextCredentials;
 
 - (void)play;
 - (void)pause;

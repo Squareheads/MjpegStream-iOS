@@ -29,6 +29,7 @@
 
 @class CredentialAlertView;
 
+
 @protocol CredentialAlertDelegate <NSObject>
 
 - (void)credentialAlertCancelled:(CredentialAlertView *)alert;
@@ -36,24 +37,19 @@
 
 @end
 
-@interface CredentialAlertView : UIAlertView
-                                <UITextFieldDelegate, 
-                                 UIAlertViewDelegate>
-{
-    
+
+@interface CredentialAlertView : UIAlertView <UITextFieldDelegate, UIAlertViewDelegate> {
 @private
     UITextField *_usernameField;
     UITextField *_passwordField;
     id<CredentialAlertDelegate> _credentialDelegate;
-    
 }
 
-@property (nonatomic, readwrite, copy) NSString *username;
-@property (nonatomic, readwrite, copy) NSString *password;
-@property (nonatomic, readwrite, assign) id<CredentialAlertDelegate> credentialDelegate;
+@property (nonatomic, copy) NSString *username;
+@property (nonatomic, copy) NSString *password;
+@property (nonatomic, assign) id <CredentialAlertDelegate> credentialDelegate;
 
-- (id)initWithDelegate:(id<CredentialAlertDelegate>)delegate 
-               forHost:(NSString *)hostName;
+- (id)initWithDelegate:(id<CredentialAlertDelegate>)delegate forHost:(NSString *)hostName;
 
 @end
 
@@ -135,10 +131,6 @@
 
 #pragma mark - Overrides
 
-- (void)dealloc {
-    [super dealloc];
-}
-
 - (void)setFrame:(CGRect)frame {
     frame.size.height = ALERT_HEIGHT;
     frame.origin.y = ALERT_Y_POSITION;
@@ -209,8 +201,7 @@
 
 #pragma mark - UIAlertView Delegate Methods
 
--    (void)alertView:(UIAlertView *)alertView 
-clickedButtonAtIndex:(NSInteger)buttonIndex {
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == [self cancelButtonIndex]) {
         if (_credentialDelegate) {
             [_credentialDelegate credentialAlertCancelled:self];
@@ -269,7 +260,7 @@ shouldChangeCharactersInRange:(NSRange)range
 
 #pragma mark - Constants
 
-#define END_MARKER_BYTES { 0xFF, 0xD9 }
+#define END_MARKER_BYTES {0xFF, 0xD9}
 
 static NSData *_endMarkerData = nil;
 
@@ -338,18 +329,10 @@ static NSData *_endMarkerData = nil;
         [self cleanupConnection];
     }
     
-    if (_url) {
-        [_url release];
-    }
-    
-    if (_username) {
-        [_username release];
-    }
-    
-    if (_password) {
-        [_password release];
-    }
-    
+    [_url release];
+    [_username release];
+    [_password release];
+
     [super dealloc];
 }
 
@@ -358,10 +341,8 @@ static NSData *_endMarkerData = nil;
 - (void)play {
     if (_connection) {
         // continue
-    }
-    else if (_url) {
-        _connection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:_url]
-                                                      delegate:self];
+    } else if (_url) {
+        _connection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:_url] delegate:self];
     }
 }
 
@@ -384,24 +365,17 @@ static NSData *_endMarkerData = nil;
 #pragma mark - Private Methods
 
 - (void)cleanupConnection {
-    if (_connection) {
-        [_connection release];
-        _connection = nil;
-    }
-    
-    if (_receivedData) {
-        [_receivedData release];
-        _receivedData = nil;
-    }
+    [_connection release];
+    _connection = nil;
+
+    [_receivedData release];
+    _receivedData = nil;
 }
 
 #pragma mark - NSURLConnection Delegate Methods
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    if (_receivedData) {
-        [_receivedData release];
-    }
-    
+    [_receivedData release];
     _receivedData = [[NSMutableData alloc] init];
 }
 
@@ -412,7 +386,7 @@ static NSData *_endMarkerData = nil;
                                           options:0 
                                             range:NSMakeRange(0, _receivedData.length)];
     
-    long long endLocation = endRange.location + endRange.length;
+    NSUInteger endLocation = endRange.location + endRange.length;
     if (_receivedData.length >= endLocation) {
         NSData *imageData = [_receivedData subdataWithRange:NSMakeRange(0, endLocation)];
         UIImage *receivedImage = [UIImage imageWithData:imageData];
@@ -426,21 +400,17 @@ static NSData *_endMarkerData = nil;
     [self cleanupConnection];
 }
 
--                    (BOOL)connection:(NSURLConnection *)connection 
-canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
     BOOL allow = NO;
     if ([protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
         allow = _allowSelfSignedCertificates;
-    }
-    else {
+    } else {
         allow = _allowClearTextCredentials;
     }
-    
     return allow;
 }
 
--                (void)connection:(NSURLConnection *)connection 
-didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
     if ([challenge previousFailureCount] == 0 &&
         _username && _username.length > 0 &&
         _password && _password.length > 0) {
@@ -450,8 +420,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
                                     persistence:NSURLCredentialPersistenceForSession];
         [[challenge sender] useCredential:credentials
                forAuthenticationChallenge:challenge];
-    }
-    else {
+    } else {
         [[challenge sender] cancelAuthenticationChallenge:challenge];
         [self cleanupConnection];
         
@@ -467,8 +436,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
     return YES;
 }
 
-- (void)connection:(NSURLConnection *)connection 
-  didFailWithError:(NSError *)error {
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     [self cleanupConnection];
 }
 
