@@ -26,14 +26,11 @@
 #import <UIKit/UIKit.h>
 #import "MotionJpegImageView.h"
 
-@interface MotionJpegImageViewAppDelegate : NSObject 
-                                           <UIApplicationDelegate> 
-{
 
+@interface MotionJpegImageViewAppDelegate : NSObject <UIApplicationDelegate> {
 @private
     MotionJpegImageView *_imageView;
     UIWebView *_webView;
-    
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

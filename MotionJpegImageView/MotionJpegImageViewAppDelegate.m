@@ -25,34 +25,41 @@
 
 #import "MotionJpegImageViewAppDelegate.h"
 
+
 @implementation MotionJpegImageViewAppDelegate
 
 @synthesize window = _window;
 
--           (BOOL)application:(UIApplication *)application 
-didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Demonstrates the dramatic performance difference between loading M-JPEGs 
     // through UIWebView (top) vs MotionJpegImageView (bottom)
-    
-    _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, 640.0, 480.0)];
+
+	CGRect frame = self.window.frame;
+	// Top half of the parent frame.
+	CGRect webViewFrame = (CGRect){
+		0.0,
+		0.0,
+		frame.size.width,
+		roundf(frame.size.height / 2 - 1)
+	};
+	// Bottom half of the parent frame.
+	CGRect mjpegViewFrame = (CGRect){
+		0.0,
+		roundf(frame.size.height / 2 + 1),
+		frame.size.width, roundf(frame.size.height / 2 - 1)
+	};
+
+    _webView = [[UIWebView alloc] initWithFrame:webViewFrame];
     _webView.userInteractionEnabled = NO;
-    CGFloat scaleRatio = self.window.bounds.size.width / _webView.bounds.size.width;
-    CGAffineTransform scalingTransform = 
-        CGAffineTransformScale(CGAffineTransformIdentity, scaleRatio, scaleRatio);
-    [_webView setTransform:scalingTransform];
-    CGRect webFrame = _webView.frame;
-    webFrame.origin.y = 0.0;
-    webFrame.origin.x = 0.0;
-    _webView.frame = webFrame;
-    
-    NSURL *url = [NSURL URLWithString:@"http://webcam6.med.miami.edu/mjpg/video.mjpg"];
+
+    // Any MJPEG over HTTP stream.
+	NSURL *url = [NSURL URLWithString:@"http://192.168.1.1/?action=stream"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:request];
     [self.window addSubview:_webView];
     
-    webFrame.origin.y += webFrame.size.height;
-    _imageView = [[MotionJpegImageView alloc] initWithFrame:webFrame];
+    _imageView = [[MotionJpegImageView alloc] initWithFrame:mjpegViewFrame];
     _imageView.url = url;
     [self.window addSubview:_imageView];
     [_imageView play];
