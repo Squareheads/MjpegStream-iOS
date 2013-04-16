@@ -31,52 +31,25 @@
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Demonstrates the dramatic performance difference between loading M-JPEGs 
-    // through UIWebView (top) vs MotionJpegImageView (bottom)
-
-	CGRect frame = self.window.frame;
-	// Top half of the parent frame.
-	CGRect webViewFrame = (CGRect){
-		0.0,
-		0.0,
-		frame.size.width,
-		roundf(frame.size.height / 2 - 1)
-	};
-	// Bottom half of the parent frame.
-	CGRect mjpegViewFrame = (CGRect){
-		0.0,
-		roundf(frame.size.height / 2 + 1),
-		frame.size.width, roundf(frame.size.height / 2 - 1)
-	};
-
-    _webView = [[UIWebView alloc] initWithFrame:webViewFrame];
-    _webView.userInteractionEnabled = NO;
-
-    // Any MJPEG over HTTP stream.
+	// Any MJPEG over HTTP stream.
 	NSURL *url = [NSURL URLWithString:@"http://192.168.1.1/?action=stream"];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [_webView loadRequest:request];
-    [self.window addSubview:_webView];
-    
-    _imageView = [[MotionJpegImageView alloc] initWithFrame:mjpegViewFrame];
-    _imageView.url = url;
-    [self.window addSubview:_imageView];
-    [_imageView play];
-    
-    [self.window makeKeyAndVisible];
-    return YES;
+
+	_imageView = [[MotionJpegImageView alloc] initWithFrame:self.window.bounds];
+	_imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	[self.window addSubview:_imageView];
+	_imageView.url = url;
+	[_imageView start];
+	
+	[self.window makeKeyAndVisible];
+	return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    [_webView stopLoading];
-    [_imageView pause];
+	[_imageView stop];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [_webView reload];
-    [_imageView play];
+	[_imageView start];
 }
-
 
 @end

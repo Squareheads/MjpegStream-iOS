@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3220AD91719A0820042706E /* MjpegStreamClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C3220AD81719A0810042706E /* MjpegStreamClient.m */; };
+		C3220ADC1719D3840042706E /* CredentialsAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3220ADB1719D3840042706E /* CredentialsAlertView.m */; };
 		C636B828143B7538008CB95D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C636B827143B7538008CB95D /* UIKit.framework */; };
 		C636B82A143B7538008CB95D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C636B829143B7538008CB95D /* Foundation.framework */; };
 		C636B82C143B7538008CB95D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C636B82B143B7538008CB95D /* CoreGraphics.framework */; };
@@ -21,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3220AD71719A0810042706E /* MjpegStreamClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MjpegStreamClient.h; sourceTree = "<group>"; };
+		C3220AD81719A0810042706E /* MjpegStreamClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MjpegStreamClient.m; sourceTree = "<group>"; };
+		C3220ADA1719D3840042706E /* CredentialsAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialsAlertView.h; sourceTree = "<group>"; };
+		C3220ADB1719D3840042706E /* CredentialsAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialsAlertView.m; sourceTree = "<group>"; };
 		C636B823143B7538008CB95D /* MotionJpegImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionJpegImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C636B827143B7538008CB95D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C636B829143B7538008CB95D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +95,10 @@
 				C636B837143B7538008CB95D /* MotionJpegImageViewAppDelegate.m */,
 				C636B84E143B7622008CB95D /* MotionJpegImageView.h */,
 				C636B84F143B7622008CB95D /* MotionJpegImageView.m */,
+				C3220AD71719A0810042706E /* MjpegStreamClient.h */,
+				C3220AD81719A0810042706E /* MjpegStreamClient.m */,
+				C3220ADA1719D3840042706E /* CredentialsAlertView.h */,
+				C3220ADB1719D3840042706E /* CredentialsAlertView.m */,
 				C636B839143B7538008CB95D /* iPhone */,
 				C636B840143B7538008CB95D /* iPad */,
 				C636B82E143B7538008CB95D /* Supporting Files */,
@@ -195,6 +205,8 @@
 				C636B83C143B7538008CB95D /* MotionJpegImageViewAppDelegate_iPhone.m in Sources */,
 				C636B843143B7538008CB95D /* MotionJpegImageViewAppDelegate_iPad.m in Sources */,
 				C636B850143B7622008CB95D /* MotionJpegImageView.m in Sources */,
+				C3220AD91719A0820042706E /* MjpegStreamClient.m in Sources */,
+				C3220ADC1719D3840042706E /* CredentialsAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

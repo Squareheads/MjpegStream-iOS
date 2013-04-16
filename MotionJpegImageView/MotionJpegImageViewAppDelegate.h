@@ -29,8 +29,7 @@
 
 @interface MotionJpegImageViewAppDelegate : NSObject <UIApplicationDelegate> {
 @private
-    MotionJpegImageView *_imageView;
-    UIWebView *_webView;
+	MotionJpegImageView *_imageView;
 }
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;

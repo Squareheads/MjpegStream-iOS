@@ -24,29 +24,15 @@
 // SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import "MjpegStreamClient.h"
 
 
-@interface MotionJpegImageView : UIImageView {
-@private
-    NSURL *_url;
-    NSURLConnection *_connection;
-    NSMutableData *_receivedData;
-    NSString *_username;
-    NSString *_password;
-    BOOL _allowSelfSignedCertificates;
-    BOOL _allowClearTextCredentials;
-}
+@interface MotionJpegImageView : UIImageView
 
-@property (nonatomic, copy) NSURL *url;
-@property (readonly) BOOL isPlaying;
-@property (nonatomic, copy) NSString *username;
-@property (nonatomic, copy) NSString *password;
-@property (nonatomic, assign) BOOL allowSelfSignedCertificates;
-@property (nonatomic, assign) BOOL allowClearTextCredentials;
+@property (strong, nonatomic, setter=setUrl:) NSURL *url;
+@property (readonly, nonatomic, getter=isActive) BOOL active;
 
-- (void)play;
-- (void)pause;
-- (void)clear;
+- (void)start;
 - (void)stop;
 
 @end
