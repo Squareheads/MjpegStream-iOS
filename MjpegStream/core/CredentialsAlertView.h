@@ -1,9 +1,12 @@
 //
-//  MotionJpegImageViewAppDelegate.m
+//  CredentialsAlertView.h
 //  MjpegImageView
 //
-//  Created by Matthew Eagar on 10/4/11.
+//  Created by Matthew Eagar on 10/3/11.
 //  Copyright 2011 ThinkFlood Inc. All rights reserved.
+//
+//  Modified by Raman Fedaseyeu on 4/13/13.
+//  Copyright 2013 Raman Fedaseyeu. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,19 +26,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "MotionJpegImageViewAppDelegate.h"
+#import <UIKit/UIKit.h>
 
 
-@implementation MotionJpegImageViewAppDelegate
+@class CredentialsAlertView;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	return YES;
+
+@protocol CredentialsAlertDelegate <NSObject>
+
+- (void)credentialAlertCancelled:(CredentialsAlertView *)alert;
+- (void)credentialAlertSaved:(CredentialsAlertView *)alert;
+
+@end
+
+
+@interface CredentialsAlertView : UIAlertView <UITextFieldDelegate, UIAlertViewDelegate> {
+@private
+	UITextField *_usernameField;
+	UITextField *_passwordField;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-}
+@property (nonatomic, copy) NSString *username;
+@property (nonatomic, copy) NSString *password;
+@property (nonatomic, weak) id <CredentialsAlertDelegate> credentialDelegate;
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-}
+- (id)initWithDelegate:(id<CredentialsAlertDelegate>)delegate forHost:(NSString *)hostName;
 
 @end

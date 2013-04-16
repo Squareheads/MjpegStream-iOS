@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C32A9D15171D751F00D97781 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D02171D751E00D97781 /* main.m */; };
-		C32A9D1A171D751F00D97781 /* MotionJpegImageViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D0C171D751F00D97781 /* MotionJpegImageViewAppDelegate.m */; };
+		C32A9D1A171D751F00D97781 /* MjpegStreamAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D0C171D751F00D97781 /* MjpegStreamAppDelegate.m */; };
 		C32A9D22171D755A00D97781 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32A9D1F171D755A00D97781 /* Storyboard.storyboard */; };
 		C32A9D2D171D763A00D97781 /* CredentialsAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D25171D763A00D97781 /* CredentialsAlertView.m */; };
 		C32A9D2E171D763A00D97781 /* MjpegImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D27171D763A00D97781 /* MjpegImageView.m */; };
 		C32A9D2F171D763A00D97781 /* MjpegStreamClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D29171D763A00D97781 /* MjpegStreamClient.m */; };
 		C32A9D30171D763A00D97781 /* MjpegMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D2C171D763A00D97781 /* MjpegMainViewController.m */; };
+		C32A9D33171D7CC200D97781 /* README in Resources */ = {isa = PBXBuildFile; fileRef = C32A9D32171D7CC200D97781 /* README */; };
 		C636B828143B7538008CB95D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C636B827143B7538008CB95D /* UIKit.framework */; };
 		C636B82A143B7538008CB95D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C636B829143B7538008CB95D /* Foundation.framework */; };
 		C636B82C143B7538008CB95D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C636B82B143B7538008CB95D /* CoreGraphics.framework */; };
@@ -22,8 +23,8 @@
 /* Begin PBXFileReference section */
 		C32A9D02171D751E00D97781 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C32A9D08171D751F00D97781 /* MjpegStream-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MjpegStream-Prefix.pch"; sourceTree = "<group>"; };
-		C32A9D0B171D751F00D97781 /* MotionJpegImageViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionJpegImageViewAppDelegate.h; sourceTree = "<group>"; };
-		C32A9D0C171D751F00D97781 /* MotionJpegImageViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionJpegImageViewAppDelegate.m; sourceTree = "<group>"; };
+		C32A9D0B171D751F00D97781 /* MjpegStreamAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MjpegStreamAppDelegate.h; sourceTree = "<group>"; };
+		C32A9D0C171D751F00D97781 /* MjpegStreamAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MjpegStreamAppDelegate.m; sourceTree = "<group>"; };
 		C32A9D1D171D755A00D97781 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C32A9D1E171D755A00D97781 /* MjpegStream-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MjpegStream-Info.plist"; sourceTree = "<group>"; };
 		C32A9D1F171D755A00D97781 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
@@ -35,6 +36,7 @@
 		C32A9D29171D763A00D97781 /* MjpegStreamClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MjpegStreamClient.m; sourceTree = "<group>"; };
 		C32A9D2B171D763A00D97781 /* MjpegMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MjpegMainViewController.h; sourceTree = "<group>"; };
 		C32A9D2C171D763A00D97781 /* MjpegMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MjpegMainViewController.m; sourceTree = "<group>"; };
+		C32A9D32171D7CC200D97781 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		C636B823143B7538008CB95D /* MjpegStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MjpegStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C636B827143B7538008CB95D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C636B829143B7538008CB95D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,8 +65,8 @@
 				C32A9D2A171D763A00D97781 /* UI */,
 				C32A9D02171D751E00D97781 /* main.m */,
 				C32A9D08171D751F00D97781 /* MjpegStream-Prefix.pch */,
-				C32A9D0B171D751F00D97781 /* MotionJpegImageViewAppDelegate.h */,
-				C32A9D0C171D751F00D97781 /* MotionJpegImageViewAppDelegate.m */,
+				C32A9D0B171D751F00D97781 /* MjpegStreamAppDelegate.h */,
+				C32A9D0C171D751F00D97781 /* MjpegStreamAppDelegate.m */,
 			);
 			path = MjpegStream;
 			sourceTree = "<group>";
@@ -112,6 +114,7 @@
 		C636B818143B7538008CB95D = {
 			isa = PBXGroup;
 			children = (
+				C32A9D32171D7CC200D97781 /* README */,
 				C32A9CF5171D751E00D97781 /* MjpegStream */,
 				C636B826143B7538008CB95D /* Frameworks */,
 				C636B824143B7538008CB95D /* Products */,
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32A9D22171D755A00D97781 /* Storyboard.storyboard in Resources */,
+				C32A9D33171D7CC200D97781 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32A9D15171D751F00D97781 /* main.m in Sources */,
-				C32A9D1A171D751F00D97781 /* MotionJpegImageViewAppDelegate.m in Sources */,
+				C32A9D1A171D751F00D97781 /* MjpegStreamAppDelegate.m in Sources */,
 				C32A9D2D171D763A00D97781 /* CredentialsAlertView.m in Sources */,
 				C32A9D2E171D763A00D97781 /* MjpegImageView.m in Sources */,
 				C32A9D2F171D763A00D97781 /* MjpegStreamClient.m in Sources */,

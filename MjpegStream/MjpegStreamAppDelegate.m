@@ -1,9 +1,12 @@
 //
-//  MotionJpegImageViewAppDelegate.h
+//  MjpegStreamAppDelegate.m
 //  MjpegImageView
 //
 //  Created by Matthew Eagar on 10/4/11.
 //  Copyright 2011 ThinkFlood Inc. All rights reserved.
+//
+//  Modified by Raman Fedaseyeu on 4/16/13.
+//  Copyright 2013 Raman Fedaseyeu. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,16 +26,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import <UIKit/UIKit.h>
-#import "MjpegImageView.h"
+#import "MjpegStreamAppDelegate.h"
 
 
-@class MjpegMainViewController;
+@implementation MjpegStreamAppDelegate
 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	return YES;
+}
 
-@interface MotionJpegImageViewAppDelegate : UIResponder <UIApplicationDelegate>
+- (void)applicationWillResignActive:(UIApplication *)application {
+}
 
-@property (nonatomic, strong) UIWindow *window;
-@property (nonatomic, weak) IBOutlet MjpegMainViewController *viewController;
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+}
 
 @end

@@ -1,11 +1,11 @@
 //
-//  main.m
-//  MjpegImageView
+//  MjpegStreamClient.h
+//  MjpegStream
 //
-//  Created by Matthew Eagar on 10/4/11.
+//  Created by Matthew Eagar on 10/3/11.
 //  Copyright 2011 ThinkFlood Inc. All rights reserved.
 //
-//  Modified by Raman Fedaseyeu on 4/16/13.
+//  Modified by Raman Fedaseyeu on 4/13/13.
 //  Copyright 2013 Raman Fedaseyeu. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,13 +26,40 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import <UIKit/UIKit.h>
-#import "MjpegStreamAppDelegate.h"
+
+#import <Foundation/Foundation.h>
 
 
-int main(int argc, char *argv[]) {
-    @autoreleasepool {
-        int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([MjpegStreamAppDelegate class]));
-        return retVal;
-    }
-}
+@class MjpegStreamClient;
+
+
+@protocol MjpegStreamClientDelegate <NSObject>
+
+@optional
+- (void)mjpegStreamClient:(MjpegStreamClient *)mjpegStreamClient didReceiveImage:(UIImage *)image;
+- (void)mjpegStreamClientDidFinishConnection:(MjpegStreamClient *)mjpegStreamClient;
+- (void)mjpegStreamClient:(MjpegStreamClient *)mjpegStreamClient didFailWithError:(NSError *)error;
+
+@end
+
+
+@interface MjpegStreamClient : NSObject
+
+//@property (strong, nonatomic) NSString *username;
+//@property (strong, nonatomic) NSString *password;
+
+//@property (assign, nonatomic) BOOL allowSelfSignedCertificates;
+//@property (assign, nonatomic) BOOL allowClearTextCredentials;
+
+@property (strong, nonatomic) NSURL *url;
+
+@property (readonly, nonatomic, getter=isActive) BOOL active;
+
+@property (weak, nonatomic) id <MjpegStreamClientDelegate> delegate;
+
+- (id)initWithUrl:(NSURL *)url delegate:(id <MjpegStreamClientDelegate>)delegate;
+
+- (void)start;
+- (void)stop;
+
+@end

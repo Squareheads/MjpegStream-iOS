@@ -1,5 +1,5 @@
 //
-//  main.m
+//  MjpegStreamAppDelegate.h
 //  MjpegImageView
 //
 //  Created by Matthew Eagar on 10/4/11.
@@ -27,12 +27,15 @@
 // SOFTWARE.
 
 #import <UIKit/UIKit.h>
-#import "MjpegStreamAppDelegate.h"
+#import "MjpegImageView.h"
 
 
-int main(int argc, char *argv[]) {
-    @autoreleasepool {
-        int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([MjpegStreamAppDelegate class]));
-        return retVal;
-    }
-}
+@class MjpegMainViewController;
+
+
+@interface MjpegStreamAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, weak) IBOutlet MjpegMainViewController *viewController;
+
+@end
