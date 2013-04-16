@@ -1,6 +1,6 @@
 //
-//  MotionJpegImageViewAppDelegate_iPhone.h
-//  MotionJpegImageView
+//  MotionJpegImageViewAppDelegate.m
+//  MjpegImageView
 //
 //  Created by Matthew Eagar on 10/4/11.
 //  Copyright 2011 ThinkFlood Inc. All rights reserved.
@@ -25,6 +25,17 @@
 
 #import "MotionJpegImageViewAppDelegate.h"
 
-@interface MotionJpegImageViewAppDelegate_iPhone : MotionJpegImageViewAppDelegate
+
+@implementation MotionJpegImageViewAppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+}
 
 @end

@@ -1,9 +1,5 @@
 //
-//  MotionJpegImageViewAppDelegate_iPhone.m
-//  MotionJpegImageView
-//
-//  Created by Matthew Eagar on 10/4/11.
-//  Copyright 2011 ThinkFlood Inc. All rights reserved.
+// Prefix header for all source files of the 'MjpegImageView' target in the 'MjpegImageView' project
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,8 +19,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "MotionJpegImageViewAppDelegate_iPhone.h"
+#import <Availability.h>
 
-@implementation MotionJpegImageViewAppDelegate_iPhone
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
 
-@end
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif

@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C32A9D15171D751F00D97781 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D02171D751E00D97781 /* main.m */; };
+		C32A9D1A171D751F00D97781 /* MotionJpegImageViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D0C171D751F00D97781 /* MotionJpegImageViewAppDelegate.m */; };
+		C32A9D22171D755A00D97781 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32A9D1F171D755A00D97781 /* Storyboard.storyboard */; };
+		C32A9D2D171D763A00D97781 /* CredentialsAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D25171D763A00D97781 /* CredentialsAlertView.m */; };
+		C32A9D2E171D763A00D97781 /* MjpegImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D27171D763A00D97781 /* MjpegImageView.m */; };
+		C32A9D2F171D763A00D97781 /* MjpegStreamClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D29171D763A00D97781 /* MjpegStreamClient.m */; };
+		C32A9D30171D763A00D97781 /* MjpegMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C32A9D2C171D763A00D97781 /* MjpegMainViewController.m */; };
+		C636B828143B7538008CB95D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C636B827143B7538008CB95D /* UIKit.framework */; };
+		C636B82A143B7538008CB95D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C636B829143B7538008CB95D /* Foundation.framework */; };
+		C636B82C143B7538008CB95D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C636B82B143B7538008CB95D /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C32A9D02171D751E00D97781 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C32A9D08171D751F00D97781 /* MjpegStream-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MjpegStream-Prefix.pch"; sourceTree = "<group>"; };
+		C32A9D0B171D751F00D97781 /* MotionJpegImageViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionJpegImageViewAppDelegate.h; sourceTree = "<group>"; };
+		C32A9D0C171D751F00D97781 /* MotionJpegImageViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionJpegImageViewAppDelegate.m; sourceTree = "<group>"; };
+		C32A9D1D171D755A00D97781 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		C32A9D1E171D755A00D97781 /* MjpegStream-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MjpegStream-Info.plist"; sourceTree = "<group>"; };
+		C32A9D1F171D755A00D97781 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		C32A9D24171D763A00D97781 /* CredentialsAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialsAlertView.h; sourceTree = "<group>"; };
+		C32A9D25171D763A00D97781 /* CredentialsAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialsAlertView.m; sourceTree = "<group>"; };
+		C32A9D26171D763A00D97781 /* MjpegImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MjpegImageView.h; sourceTree = "<group>"; };
+		C32A9D27171D763A00D97781 /* MjpegImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MjpegImageView.m; sourceTree = "<group>"; };
+		C32A9D28171D763A00D97781 /* MjpegStreamClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MjpegStreamClient.h; sourceTree = "<group>"; };
+		C32A9D29171D763A00D97781 /* MjpegStreamClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MjpegStreamClient.m; sourceTree = "<group>"; };
+		C32A9D2B171D763A00D97781 /* MjpegMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MjpegMainViewController.h; sourceTree = "<group>"; };
+		C32A9D2C171D763A00D97781 /* MjpegMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MjpegMainViewController.m; sourceTree = "<group>"; };
+		C636B823143B7538008CB95D /* MjpegStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MjpegStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C636B827143B7538008CB95D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C636B829143B7538008CB95D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C636B82B143B7538008CB95D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C636B820143B7538008CB95D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C636B828143B7538008CB95D /* UIKit.framework in Frameworks */,
+				C636B82A143B7538008CB95D /* Foundation.framework in Frameworks */,
+				C636B82C143B7538008CB95D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C32A9CF5171D751E00D97781 /* MjpegStream */ = {
+			isa = PBXGroup;
+			children = (
+				C32A9D1C171D755A00D97781 /* Resources */,
+				C32A9D23171D763A00D97781 /* core */,
+				C32A9D2A171D763A00D97781 /* UI */,
+				C32A9D02171D751E00D97781 /* main.m */,
+				C32A9D08171D751F00D97781 /* MjpegStream-Prefix.pch */,
+				C32A9D0B171D751F00D97781 /* MotionJpegImageViewAppDelegate.h */,
+				C32A9D0C171D751F00D97781 /* MotionJpegImageViewAppDelegate.m */,
+			);
+			path = MjpegStream;
+			sourceTree = "<group>";
+		};
+		C32A9D1C171D755A00D97781 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C32A9D1D171D755A00D97781 /* Localizable.strings */,
+				C32A9D1E171D755A00D97781 /* MjpegStream-Info.plist */,
+				C32A9D1F171D755A00D97781 /* Storyboard.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C32A9D23171D763A00D97781 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				C32A9D31171D764900D97781 /* trash */,
+				C32A9D26171D763A00D97781 /* MjpegImageView.h */,
+				C32A9D27171D763A00D97781 /* MjpegImageView.m */,
+				C32A9D28171D763A00D97781 /* MjpegStreamClient.h */,
+				C32A9D29171D763A00D97781 /* MjpegStreamClient.m */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		C32A9D2A171D763A00D97781 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C32A9D2B171D763A00D97781 /* MjpegMainViewController.h */,
+				C32A9D2C171D763A00D97781 /* MjpegMainViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C32A9D31171D764900D97781 /* trash */ = {
+			isa = PBXGroup;
+			children = (
+				C32A9D24171D763A00D97781 /* CredentialsAlertView.h */,
+				C32A9D25171D763A00D97781 /* CredentialsAlertView.m */,
+			);
+			name = trash;
+			sourceTree = "<group>";
+		};
+		C636B818143B7538008CB95D = {
+			isa = PBXGroup;
+			children = (
+				C32A9CF5171D751E00D97781 /* MjpegStream */,
+				C636B826143B7538008CB95D /* Frameworks */,
+				C636B824143B7538008CB95D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C636B824143B7538008CB95D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C636B823143B7538008CB95D /* MjpegStream.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C636B826143B7538008CB95D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C636B827143B7538008CB95D /* UIKit.framework */,
+				C636B829143B7538008CB95D /* Foundation.framework */,
+				C636B82B143B7538008CB95D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C636B822143B7538008CB95D /* MjpegStream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C636B849143B7538008CB95D /* Build configuration list for PBXNativeTarget "MjpegStream" */;
+			buildPhases = (
+				C636B81F143B7538008CB95D /* Sources */,
+				C636B820143B7538008CB95D /* Frameworks */,
+				C636B821143B7538008CB95D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MjpegStream;
+			productName = MotionJpegImageView;
+			productReference = C636B823143B7538008CB95D /* MjpegStream.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C636B81A143B7538008CB95D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "ThinkFlood Inc";
+			};
+			buildConfigurationList = C636B81D143B7538008CB95D /* Build configuration list for PBXProject "MjpegStream" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C636B818143B7538008CB95D;
+			productRefGroup = C636B824143B7538008CB95D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C636B822143B7538008CB95D /* MjpegStream */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C636B821143B7538008CB95D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32A9D22171D755A00D97781 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C636B81F143B7538008CB95D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32A9D15171D751F00D97781 /* main.m in Sources */,
+				C32A9D1A171D751F00D97781 /* MotionJpegImageViewAppDelegate.m in Sources */,
+				C32A9D2D171D763A00D97781 /* CredentialsAlertView.m in Sources */,
+				C32A9D2E171D763A00D97781 /* MjpegImageView.m in Sources */,
+				C32A9D2F171D763A00D97781 /* MjpegStreamClient.m in Sources */,
+				C32A9D30171D763A00D97781 /* MjpegMainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C636B847143B7538008CB95D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C636B848143B7538008CB95D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C636B84A143B7538008CB95D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$PROJECT_NAME/$PROJECT_NAME-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "$PROJECT_NAME/Resources/$PROJECT_NAME-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = MjpegStream;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C636B84B143B7538008CB95D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$PROJECT_NAME/$PROJECT_NAME-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "$PROJECT_NAME/Resources/$PROJECT_NAME-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = MjpegStream;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C636B81D143B7538008CB95D /* Build configuration list for PBXProject "MjpegStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C636B847143B7538008CB95D /* Debug */,
+				C636B848143B7538008CB95D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C636B849143B7538008CB95D /* Build configuration list for PBXNativeTarget "MjpegStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C636B84A143B7538008CB95D /* Debug */,
+				C636B84B143B7538008CB95D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C636B81A143B7538008CB95D /* Project object */;
+}

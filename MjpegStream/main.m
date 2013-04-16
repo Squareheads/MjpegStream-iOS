@@ -1,6 +1,6 @@
 //
-//  MotionJpegImageViewAppDelegate_iPad.m
-//  MotionJpegImageView
+//  main.m
+//  MjpegImageView
 //
 //  Created by Matthew Eagar on 10/4/11.
 //  Copyright 2011 ThinkFlood Inc. All rights reserved.
@@ -23,8 +23,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "MotionJpegImageViewAppDelegate_iPad.h"
+#import <UIKit/UIKit.h>
+#import "MotionJpegImageViewAppDelegate.h"
 
-@implementation MotionJpegImageViewAppDelegate_iPad
 
-@end
+int main(int argc, char *argv[]) {
+    @autoreleasepool {
+        int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([MotionJpegImageViewAppDelegate class]));
+        return retVal;
+    }
+}
