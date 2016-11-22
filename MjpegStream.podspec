@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
  
   s.platform = :ios
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '7.0'
   s.name = "MjpegStream-SQH"
   s.summary = "Mjpeg Stream"
   s.requires_arc = true
